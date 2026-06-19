@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Portfolio.OS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-shadow {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .bento-shadow-hover {
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopNavBar (Mobile Version) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-16 flex items-center justify-between px-margin-mobile">
+<div class="font-headline-md text-headline-md font-bold text-primary">Portfolio.OS</div>
+<!-- Mobile Hamburger Trigger -->
+<button aria-label="Toggle Menu" class="p-base text-on-surface-variant active:scale-95 transition-transform" id="menu-trigger">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+<!-- Hidden Nav Sidebar for Mobile -->
+<div class="fixed inset-0 bg-surface-container-low translate-x-full transition-transform duration-300 z-50 flex flex-col p-stack-md" id="mobile-menu">
+<div class="flex justify-between items-center mb-stack-lg">
+<div class="font-headline-sm text-headline-sm font-black text-primary">Admin Panel</div>
+<button class="p-base" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-base">
+<a class="flex items-center gap-stack-sm p-stack-md text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">home</span> Home
+                </a>
+<a class="flex items-center gap-stack-sm p-stack-md text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">person</span> About
+                </a>
+<a class="flex items-center gap-stack-sm p-stack-md bg-secondary-container text-on-secondary-container font-semibold rounded-lg font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">folder</span> Projects
+                </a>
+<a class="flex items-center gap-stack-sm p-stack-md text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">contact_mail</span> Contact
+                </a>
+</nav>
+<div class="mt-auto pt-stack-lg border-t border-outline-variant">
+<button class="w-full py-stack-md bg-primary text-on-primary rounded-lg font-label-md">Login</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-stack-lg px-margin-mobile max-w-full">
+<!-- Header Section -->
+<section class="mb-stack-lg">
+<h1 class="font-headline-xl text-[40px] leading-tight mb-base">Selected Projects</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">Engineering high-performance solutions with technical precision.</p>
+</section>
+<!-- Project List: Single Column Bento-style optimization for mobile -->
+<div class="flex flex-col gap-stack-md">
+<!-- Project Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl bento-shadow overflow-hidden transition-all duration-300 active:scale-[0.98]">
+<div class="h-64 relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional high-tech dashboard interface displayed on a clean tablet screen. The design features minimalist data visualizations in electric blue and charcoal grey. Soft studio lighting highlights the sleek glass surface against a blurred architectural office background, conveying corporate authority and engineering excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3UtV6aJESIEKkQB-GjHm6cB1VWeYCEIVFuaOf989u0XA_tGcpkYZt2FRqS54zEM1blWSJKVbM2imGFTyN_8zm2tzrbDPfu502ydSKv3f3hFXtQxNeCqOe0OYigKj0rN3utMqtbexPf1o_uUQqBbWqIr-4_g2_WVz3MQLYdYgxBhVQX1fM3D27AFK0Bwx-9Zm-KPjq7kMhuSeMMu0LW1RSMf1hGNhuPCpPMy1T0PrsShrllq9QMV-19bCVKewev2Wk1MaTttO-LwQ')"></div>
+<div class="absolute top-4 right-4 bg-primary/90 text-on-primary px-stack-sm py-1 rounded-full font-label-md text-label-md backdrop-blur-sm">Featured</div>
+</div>
+<div class="p-stack-md">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">SYSTEM ARCHITECTURE</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">AWS</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-base">Quantum Ledger Engine</h2>
+<p class="text-on-surface-variant font-body-md mb-stack-md line-clamp-3">
+                        A low-latency distributed database designed for high-frequency trading platforms, achieving sub-millisecond synchronization across global clusters.
+                    </p>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-tertiary-container text-on-tertiary-container rounded-lg font-label-md text-label-md active:bg-tertiary transition-colors" href="#">
+                        View Details <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl bento-shadow overflow-hidden transition-all duration-300 active:scale-[0.98]">
+<div class="h-64 relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro shot of a sophisticated circuit board with glowing blue light pathways. The aesthetic is extremely technical and precise, utilizing a monochromatic palette with sharp neon blue accents. The lighting is low-key and dramatic, emphasizing the intricate architecture of modern silicon engineering and high-speed data transfer." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVA9a3Z7FU1kk_vxgDNAz4dums2SG5Fxwo78doTpesJr-beEEJRS-rfG1P0U7ejcytnpOgVTACVK8HhOvyZPYxIQ0K5z_YB73dt4KwZ_b71Qr7OTcNjO3M1IMBdCnqt1fxgsQYCeNZEVYhalm0UmvUuoeaAQ9Hvv91NQjJ_2LFiM5qGSD_TA_WZmWR_gTerkdKQciitTO7YsRtX_tN5wxRTwHymIFEFBTYwG18M-KabXcbLnBAv1XBPIGYK8azO4zm8am8ZLJrw7M')"></div>
+</div>
+<div class="p-stack-md">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">WEBGL</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">TYPESCRIPT</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-base">Nexus Visualizer</h2>
+<p class="text-on-surface-variant font-body-md mb-stack-md line-clamp-3">
+                        Real-time 3D network topology visualization tool capable of rendering 100k+ nodes with interactive physics and hardware-accelerated shaders.
+                    </p>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-tertiary-container text-on-tertiary-container rounded-lg font-label-md text-label-md active:bg-tertiary transition-colors" href="#">
+                        View Details <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl bento-shadow overflow-hidden transition-all duration-300 active:scale-[0.98]">
+<div class="h-64 relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A minimalist architectural shot of a modern data center aisle. Pristine white server racks stand in perfect symmetry under cool, bright overhead lights. The color palette is clinical and clean, using shades of white, silver, and soft grey to represent high-availability infrastructure and corporate reliability." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZZSEr3T0BWi0j8sftWyz0BFM9eOjO-rEGA5KF3bLpftvjwX_20g_wrmw6xoHTzTaunQFiIZO6h9ArbHzZNULJYxqtKqj2Hj0XH7FZNx7P71YNxLr3aSS7jXHtc6-XNwYxOccRKlpPDPW7GAvYQh86Bzt06NMT61Z-ILvgmfpaXqCzkQ_h4_fHNj519XHhQGw7Tcd4q8xIyXYTLBNGDLpGQhJlshzSYCgx3eIzLLBLs1pmfWcJkpVzTjIV3LiukaXfvFdiY8450QQ')"></div>
+</div>
+<div class="p-stack-md">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">SECURITY</span>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full font-label-md text-[12px]">PYTHON</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-base">Sentinel Shield AI</h2>
+<p class="text-on-surface-variant font-body-md mb-stack-md line-clamp-3">
+                        Advanced threat detection system utilizing machine learning to identify anomalous traffic patterns and prevent zero-day vulnerabilities.
+                    </p>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-tertiary-container text-on-tertiary-container rounded-lg font-label-md text-label-md active:bg-tertiary transition-colors" href="#">
+                        View Details <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant py-stack-lg px-margin-mobile">
+<div class="flex flex-col gap-stack-md items-center text-center">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Portfolio.OS</div>
+<div class="flex gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Email</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md mt-base">
+                © 2024 Portfolio.OS. Engineered for performance.
+            </p>
+</div>
+</footer>
+<!-- Micro-interaction Scripts -->
+<script>
+        const menuTrigger = document.getElementById('menu-trigger');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuTrigger.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+
+        // Add subtle scroll behavior to header
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('shadow-md');
+                return;
+            }
+            if (currentScroll > lastScroll) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+                header.classList.add('shadow-md');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Add smooth transitions to project cards on touch
+        const cards = document.querySelectorAll('article');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.classList.add('bento-shadow-hover');
+            });
+            card.addEventListener('touchend', () => {
+                card.classList.remove('bento-shadow-hover');
+            });
+        });
+    </script>
+</body></html>

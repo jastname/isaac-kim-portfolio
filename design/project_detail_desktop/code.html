@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Detail | Portfolio.OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .project-hero-shadow {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .project-card-hover:hover {
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-background/80 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center max-w-[1200px] mx-auto px-margin-desktop h-16">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Portfolio.OS</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-tertiary-container dark:text-tertiary-fixed font-bold border-b-2 border-tertiary-container" href="#">Projects</a>
+<button class="ml-stack-sm px-6 py-2 bg-primary text-on-primary rounded-lg font-label-md transition-all active:scale-95 hover:bg-surface-tint">Login</button>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<main class="pt-24 pb-stack-lg max-w-[1200px] mx-auto px-margin-desktop">
+<!-- Navigation Back -->
+<div class="mb-stack-md">
+<a class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-all group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-md text-label-md">Back to Projects</span>
+</a>
+</div>
+<!-- Section 1: Header -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-stack-lg items-end">
+<div class="md:col-span-7">
+<div class="flex flex-wrap gap-stack-sm mb-base">
+<span class="font-label-md text-label-md text-secondary border border-secondary/20 px-3 py-1 rounded-full bg-secondary-container/10">Case Study</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-stack-sm">Neural Engine Interface</h1>
+<div class="flex flex-col md:flex-row md:items-center gap-stack-sm text-on-surface-variant font-body-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+<span>Aug 2023 - Jan 2024</span>
+</div>
+<div class="hidden md:block w-1 h-1 rounded-full bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+<span>Lead Technical UI Designer</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 flex md:justify-end gap-stack-sm">
+<a class="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg font-label-md hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined">code</span> GitHub
+                </a>
+<a class="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 bg-on-tertiary-fixed-variant text-on-primary rounded-lg font-label-md hover:opacity-90 transition-all project-hero-shadow" href="#">
+<span class="material-symbols-outlined">rocket_launch</span> Live Demo
+                </a>
+</div>
+</section>
+<!-- Hero Image -->
+<div class="w-full h-[400px] md:h-[600px] rounded-xl overflow-hidden mb-stack-lg project-hero-shadow border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A wide, high-resolution cinematic shot of a sleek professional software dashboard on a high-end monitor. The interface features complex neural network visualizations in deep blacks and electric blue highlights. The surrounding office is a minimalist, modern workspace with soft ambient lighting and clean lines. The aesthetic is corporate yet high-tech and performance-driven." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-HGt4liLB-aerHC0mOwsEJROIZo7-r_kZ80y3UpBKszApqsKipb3I7QowXyIhBkvBmTpfK5oV3rrzuv7K3KT8wA6rezJXfNbxi1Am7nAB8yxrQrNOvNrkCBhHVDESbOaX96G59sR8qHPb9499-3oO2G59f-NqDI9LCdbpTc2d2xE8Y4kLBm4PSt8yeBTwSTOZkfDNRyMbHYJR23bNiVxfXJAW2d3KaKS2gA2kNC3SIf_jN7iQUWMFumroY6NssjAibFclGwzrcyI"/>
+</div>
+<!-- Section 2: Narrative (Bento Grid Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<!-- Problem -->
+<div class="p-stack-md bg-surface-container-lowest rounded-xl project-hero-shadow border border-outline-variant/20 flex flex-col gap-stack-sm project-card-hover transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-error-container/20 text-error">
+<span class="material-symbols-outlined text-[28px]">crisis_alert</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">The Problem</h3>
+<p class="text-on-surface-variant font-body-md">Data scientists were struggling with opaque neural network training processes. Visualizing high-dimensional loss functions in real-time remained a significant bottleneck in experimental velocity.</p>
+</div>
+<!-- Solution -->
+<div class="p-stack-md bg-surface-container-lowest rounded-xl project-hero-shadow border border-outline-variant/20 flex flex-col gap-stack-sm project-card-hover transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary-container/20 text-on-secondary-container">
+<span class="material-symbols-outlined text-[28px]">lightbulb</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">The Solution</h3>
+<p class="text-on-surface-variant font-body-md">We engineered a React-based WebGL dashboard that translates abstract tensor operations into intuitive 3D spatial maps, allowing for immediate pinpointing of gradient explosions.</p>
+</div>
+<!-- Results -->
+<div class="p-stack-md bg-surface-container-lowest rounded-xl project-hero-shadow border border-outline-variant/20 flex flex-col gap-stack-sm project-card-hover transition-all duration-300">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[28px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">The Results</h3>
+<p class="text-on-surface-variant font-body-md">Achieved a 40% reduction in debug cycles for model architecture changes. The internal tool was adopted as the standard visualization layer for the entire R&amp;D department.</p>
+</div>
+</section>
+<!-- Metric Highlights -->
+<section class="flex flex-wrap gap-stack-lg mb-stack-lg p-stack-md border-y border-outline-variant/30 justify-center md:justify-start">
+<div class="flex flex-col">
+<span class="font-metric-display text-metric-display text-secondary">40%</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Faster Debugging</span>
+</div>
+<div class="hidden md:block w-[1px] h-12 bg-outline-variant self-center"></div>
+<div class="flex flex-col">
+<span class="font-metric-display text-metric-display text-secondary">1.2s</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Avg. Latency</span>
+</div>
+<div class="hidden md:block w-[1px] h-12 bg-outline-variant self-center"></div>
+<div class="flex flex-col">
+<span class="font-metric-display text-metric-display text-secondary">15k</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Daily Events</span>
+</div>
+</section>
+<!-- Section 3: Tech Stack & Detailed Content -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col gap-stack-md">
+<h2 class="font-headline-md text-headline-md">Implementation Depth</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    The core of the Neural Engine Interface was built using a custom rendering pipeline. By leveraging Three.js and raw GLSL shaders, we managed to render millions of data points at 60fps directly in the browser. 
+                    <br/><br/>
+                    The state management utilizes a hybrid approach between Redux for global configuration and localized context for high-frequency coordinate updates. This ensured that the UI remained snappy even under intense computational load.
+                </p>
+<div class="w-full aspect-video rounded-lg overflow-hidden border border-outline-variant/20 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist technical diagram showing a software architecture flow. The diagram uses thin lines, geometric icons, and a palette of light grays and electric blue accents. It illustrates the data flow from a server to a client-side visualization engine in a high-tech corporate style. The overall feel is one of technical precision and modern architectural design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlXEtLjvO5yXvub_96z5Iur6a66XOY_fN1LXucwloJrGObibmDz_MsMglSMnEumjaBcFao4Hls1vj2XhYyzNpYEUcxqwnO90FWDCLYJjhE4wGri8pyAEmvE2wrdKrYL98LMZXiI0dA8WhaPMF7ubw0C5PvNLl46-lz6HxHNzyYRhsjl5naI8lT4UmcXJZg8JbmOK7S1gRzeJfU5FkrAVvYq3--XpHJn69QpFGKCA7nQZrpWvrbBHFHAtLbv4UwxH_O1b8LAGO9RwM"/>
+</div>
+</div>
+<aside class="md:col-span-4">
+<div class="sticky top-24 p-stack-md bg-surface-container-low rounded-xl border border-outline-variant/30 flex flex-col gap-stack-md">
+<div>
+<h4 class="font-label-md text-label-md mb-stack-sm text-primary uppercase">Technologies Used</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">React 18</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">Three.js</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">GLSL</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">Tailwind CSS</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant font-label-md text-[12px] rounded-md border border-outline-variant/20">WebWorkers</span>
+</div>
+</div>
+<div class="pt-stack-sm border-t border-outline-variant/20">
+<h4 class="font-label-md text-label-md mb-stack-sm text-primary uppercase">Project Links</h4>
+<div class="flex flex-col gap-stack-sm">
+<a class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/30 hover:border-primary transition-all group" href="#">
+<span class="flex items-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-on-surface-variant">terminal</span> Repository
+                                </span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-lg border border-outline-variant/30 hover:border-primary transition-all group" href="#">
+<span class="flex items-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span> Production View
+                                </span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<!-- Navigation: Final CTA -->
+<section class="mt-stack-lg pt-stack-lg border-t border-outline-variant/30 text-center">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Interested in this project?</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md max-w-xl mx-auto">I'm currently looking for new opportunities to build high-performance data visualizations and professional technical interfaces.</p>
+<div class="flex flex-wrap justify-center gap-stack-sm">
+<a class="px-8 py-3 bg-primary text-on-primary rounded-lg font-label-md hover:bg-surface-tint transition-all active:scale-95" href="#">Get In Touch</a>
+<a class="px-8 py-3 border border-outline-variant text-on-surface-variant rounded-lg font-label-md hover:bg-surface-container-low transition-all active:scale-95" href="#">Next Project</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto px-margin-desktop gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Portfolio.OS</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Portfolio.OS. Engineered for performance.</p>
+</div>
+<div class="flex gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for scroll reveals or simple hover effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Applying scroll fade-in effect to bento cards
+            const cards = document.querySelectorAll('.p-stack-md');
+            cards.forEach(card => {
+                card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(card);
+            });
+        });
+    </script>
+</body></html>

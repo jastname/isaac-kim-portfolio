@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio.OS | Secure Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-focus-glow:focus-within {
+            box-shadow: 0 0 0 2px rgba(57, 128, 244, 0.2);
+        }
+        body {
+            background-color: #f7f9fb;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased overflow-hidden">
+<!-- Animated background for high-end technical feel -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-40">
+
+</div>
+<!-- Main Content Canvas -->
+<main class="min-h-screen flex items-center justify-center p-margin-mobile md:p-margin-desktop">
+<!-- Auth Container -->
+<div class="w-full max-w-[420px] animate-in fade-in slide-in-from-bottom-4 duration-700">
+<!-- Branding Header -->
+<div class="flex flex-col items-center mb-stack-lg text-center">
+<div class="mb-stack-sm p-base bg-primary rounded-lg text-on-primary">
+<span class="material-symbols-outlined !text-[32px]">shield_person</span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Portfolio.OS</h1>
+<p class="font-label-md text-label-md text-on-surface-variant tracking-wider uppercase">Administrative Portal</p>
+</div>
+<!-- Login Card -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-xl shadow-[0_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 backdrop-blur-sm">
+<form class="flex flex-col gap-stack-md" id="login-form" onsubmit="event.preventDefault();">
+<!-- Username/Email Field -->
+<div class="flex flex-col gap-base">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-base" for="id_field">
+<span class="material-symbols-outlined text-[18px]">person</span>
+                            Email/Username
+                        </label>
+<div class="relative group">
+<input class="w-full h-12 px-stack-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-on-tertiary-container focus:border-on-tertiary-container outline-none transition-all duration-300 font-body-md text-body-md placeholder:text-outline" id="id_field" placeholder="Enter your credentials" required="" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-base">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center gap-base" for="password_field">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+                                Password
+                            </label>
+<a class="font-label-md text-label-md text-on-tertiary-container hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<input class="w-full h-12 px-stack-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-on-tertiary-container focus:border-on-tertiary-container outline-none transition-all duration-300 font-body-md text-body-md placeholder:text-outline" id="password_field" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-stack-sm top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Security Info -->
+<div class="flex items-center gap-base p-stack-sm bg-surface-container-low rounded-lg border border-outline-variant/20">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<p class="font-label-md text-label-md text-on-surface-variant text-[12px] leading-tight">
+                            Secure, encrypted session. Multi-factor authentication may be required.
+                        </p>
+</div>
+<!-- CTA Button -->
+<button class="mt-base w-full h-12 bg-tertiary text-on-tertiary rounded-lg font-label-md text-label-md uppercase tracking-[0.1em] flex items-center justify-center gap-stack-sm hover:bg-on-surface-variant transition-all duration-300 active:scale-[0.98] shadow-lg shadow-primary/10" type="submit">
+                        Sign In
+                        <span class="material-symbols-outlined text-[18px]">login</span>
+</button>
+</form>
+</div>
+<!-- Footer Meta -->
+<div class="mt-stack-lg flex flex-col items-center gap-base">
+<p class="font-label-md text-label-md text-on-surface-variant/60">
+                    © 2024 Portfolio.OS. Engineered for performance.
+                </p>
+<div class="flex gap-stack-md">
+<a class="font-label-md text-[12px] text-on-surface-variant/60 hover:text-primary transition-colors" href="#">System Status</a>
+<span class="text-on-surface-variant/30 text-[12px]">•</span>
+<a class="font-label-md text-[12px] text-on-surface-variant/60 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span class="text-on-surface-variant/30 text-[12px]">•</span>
+<a class="font-label-md text-[12px] text-on-surface-variant/60 hover:text-primary transition-colors" href="#">Help Desk</a>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Micro-interactions for form focus and input state
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.closest('.group')?.classList.add('scale-[1.01]');
+            });
+            input.addEventListener('blur', () => {
+                input.closest('.group')?.classList.remove('scale-[1.01]');
+            });
+        });
+
+        // Simple button loading state simulation
+        const loginForm = document.getElementById('login-form');
+        const submitBtn = loginForm.querySelector('button[type="submit"]');
+        
+        loginForm.addEventListener('submit', () => {
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Authenticating...
+            `;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                // Interaction only for demo
+            }, 2000);
+        });
+
+        // Toggle password visibility
+        const togglePass = document.querySelector('button[type="button"]');
+        const passInput = document.getElementById('password_field');
+        togglePass.addEventListener('click', () => {
+            const isPass = passInput.type === 'password';
+            passInput.type = isPass ? 'text' : 'password';
+            togglePass.innerHTML = `<span class="material-symbols-outlined text-[20px]">${isPass ? 'visibility_off' : 'visibility'}</span>`;
+        });
+    </script>
+</body></html>

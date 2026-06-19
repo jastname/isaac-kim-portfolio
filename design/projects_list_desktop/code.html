@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Portfolio.OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .project-card-shadow {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card-shadow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-background/80 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-[1200px] mx-auto px-margin-desktop h-16">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">Portfolio.OS</a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-tertiary-container dark:text-tertiary-fixed font-bold border-b-2 border-tertiary-container" href="#">Projects</a>
+<button class="ml-4 px-6 py-2 bg-primary text-on-primary rounded-full font-label-md hover:opacity-90 active:scale-95 transition-all duration-300">Login</button>
+</nav>
+<button class="md:hidden p-2 text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+<!-- Hero Section for Projects -->
+<section class="mb-stack-lg">
+<div class="flex flex-col gap-base max-w-2xl">
+<span class="font-label-md text-label-md text-on-secondary-container bg-secondary-container px-3 py-1 rounded-full w-fit">SELECTED WORKS</span>
+<h1 class="font-headline-xl text-headline-xl text-primary">Strategic Engineering &amp; Design</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">A collection of performance-driven solutions focused on scalability, user impact, and technical excellence.</p>
+</div>
+</section>
+<!-- Projects Bento/Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Project 1 (Large Bento) -->
+<article class="md:col-span-8 group relative bg-surface-container-lowest rounded-xl overflow-hidden project-card-shadow flex flex-col md:flex-row">
+<div class="absolute top-4 left-4 z-10">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full font-label-md glass-effect">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                        Featured
+                    </div>
+</div>
+<div class="w-full md:w-1/2 aspect-video md:aspect-auto h-64 md:h-full relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sleek, high-tech dashboard interface displayed on a professional monitor within a dimly lit, minimalist workspace. The screen shows complex data visualizations in shades of electric blue and slate grey. Cinematic soft lighting highlights the aluminum frame of the monitor against a clean, white architectural background, emphasizing a high-end corporate engineering aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjQ9mVWO4Tit4EAa1oh1J6qIeNIKUGs3VXCGbhb6XpbYP1-zccokli82xT4rio8sLHzjKHNy-04_2pTKBHvwR6YNKw7jA-MLHJgmzqCxvmljKjPmq_ou2VTLrn-D8YcmHDfneKrpMQpz2z6c-PvXL6QSzfF2OXQJjRRiVJYFsEPNFL0uAACn_7DSAmks9HRDxET9PHxzS-AHMS46xRmbflBnHGhUGz0bf67e1aEY8GhYjIuIN2vbHdWlK1bhsjz26CLjEIjVny9CM"/>
+</div>
+<div class="w-full md:w-1/2 p-stack-md flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">OmniChannel Enterprise Dashboard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Centralizing fragmented data silos into a unified real-time monitoring suite for Fortune 500 logistics.</p>
+<div class="mb-6">
+<div class="text-secondary font-metric-display text-metric-display">+34% Efficiency</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Operational Throughput Increase</div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="font-label-md text-label-md bg-surface-container-high px-3 py-1 rounded text-primary">React</span>
+<span class="font-label-md text-label-md bg-surface-container-high px-3 py-1 rounded text-primary">GraphQL</span>
+<span class="font-label-md text-label-md bg-surface-container-high px-3 py-1 rounded text-primary">Node.js</span>
+</div>
+</div>
+<a class="flex items-center gap-2 text-on-tertiary-container font-label-md hover:underline decoration-2 underline-offset-4" href="#">
+                        View Case Study
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Secondary Project 2 (Square Bento) -->
+<article class="md:col-span-4 group bg-surface-container-lowest rounded-xl overflow-hidden project-card-shadow flex flex-col">
+<div class="aspect-square relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist architectural shot of a modern data center hallway with glowing green server LEDs reflecting off polished dark floors. The perspective creates deep leading lines toward a bright exit point. The color palette is dominated by deep blacks and vibrant emerald greens, capturing a mood of high-security technical precision and computational power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS3JmOSc9SG5hcfi98a2af9z_-UyLZRFsPMag0Z_hLvrSNlB8_WLeFq87KdmOH1QrfYEgzSyC1uRUy-QtES0zPcClFA987OQAsb2DHGTTF1C7ksWXX_5oTbXqXQ4v9fZSBFLmdnx5uk4TlzHOjtdC1vAiHz50Ab3z61IPQEGehLd0n4Oja5uG1Q6vs7HpvKDd9D9EqhKsjzXRb51P7iT6tCpTozdla_ZY608WJGL__UPKrv77t7F8X-NoKyuIXUO-Cqui6eaeETWo"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Cloud Infrastructure Migration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Architecting a zero-downtime transition to serverless for a global fintech platform.</p>
+<div class="mb-4">
+<div class="text-secondary font-metric-display text-metric-display">-40% Cost</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Annual Cloud Expenditure</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<div class="flex gap-2">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">AWS</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">Terraform</span>
+</div>
+<a class="material-symbols-outlined text-primary hover:text-on-tertiary-container transition-colors" href="#">open_in_new</a>
+</div>
+</div>
+</article>
+<!-- Standard Grid Card 3 -->
+<article class="md:col-span-4 group bg-surface-container-lowest rounded-xl overflow-hidden project-card-shadow flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, top-down photograph of a professional designer's desk containing a laptop, a smartphone showing a mobile app, and a minimalist notebook. The lighting is bright and airy, typical of a high-end corporate setting. The focus is sharp on the mobile device which displays a sleek banking interface with green accents against a light grey background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgnGFMqEyrM1n4GpWidEF6MRsdIXVEWrBa8iyVerLYm3gVAiOTu-HeBWXvyj4IUKkp5tPlY8FfrlIqZ8XC_6sZjIjuKn7JY0J286r2dsUwIPx10rn9N3alcVH2zTx71yb4TRCwiYIWW27PhCXQ3t-jSoGPOEAu84Mj1BROdhAAl8NkI6kl7oGk-fe4nfWnBSsUCtJu58q2FQwjTkNfg_DUJilpUU5nRxUEuVumJhS3qYpbGgEswhuLRervqDggN-iL7V7kEWgMNA"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">NeoBank Mobile App</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Designing a friction-less onboarding experience for Gen-Z wealth management.</p>
+<div class="mb-4">
+<div class="text-secondary font-metric-display text-metric-display">4.9/5</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">App Store Rating</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<div class="flex gap-2">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">Swift</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">Figma</span>
+</div>
+<a class="material-symbols-outlined text-primary" href="#">arrow_forward</a>
+</div>
+</div>
+</article>
+<!-- Standard Grid Card 4 -->
+<article class="md:col-span-4 group bg-surface-container-lowest rounded-xl overflow-hidden project-card-shadow flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An abstract visualization of digital neural networks, featuring delicate glowing lines and nodes connecting in a 3D dark space. The nodes glow with a soft primary blue light, creating a sense of intelligent data flow. The composition is clean, with plenty of negative space to convey a professional, sophisticated AI research aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEIgWiDCq4n9Fz7OSnhSvq97X9Q6DABxqRHoGIf-lZXM8Z6C2dSSrIYnel0fDYqNyWP_Yn_4ffsQ5M0tOWrNy-HNVvl_oprg6cD4JUvFd_xv146T1PboYMdjfdSJ7lb0KhxrLvBqFkjRomPJy1XPvStxdTX2BDxi19MF2nzT4yc2f1lxvJJxSUkttmYQwwM3Hr6WiETauW9dz3xTdK6nqdaRaU9ooxY5v5tFnauV1rNiMVLq8HNwp1QxMg-M7i4P8P206QKBU-jf8"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Predictive Analytics Engine</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Custom ML model for predicting supply chain disruptions before they happen.</p>
+<div class="mb-4">
+<div class="text-secondary font-metric-display text-metric-display">+22% Sales</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Inventory Optimization</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<div class="flex gap-2">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">Python</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">PyTorch</span>
+</div>
+<a class="material-symbols-outlined text-primary" href="#">arrow_forward</a>
+</div>
+</div>
+</article>
+<!-- Standard Grid Card 5 -->
+<article class="md:col-span-4 group bg-surface-container-lowest rounded-xl overflow-hidden project-card-shadow flex flex-col">
+<div class="aspect-video relative overflow-hidden bg-surface-variant">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A contemporary office lobby with large floor-to-ceiling windows and marble textures. The lighting is natural and bright, creating a high-key light mode atmosphere. In the background, a digital kiosk displays a colorful interface for employee check-ins. The aesthetic is clean, modern, and corporate, emphasizing organizational efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHLw6X0vLyE7cufdxgn1pjhAUw7LGmgvXBcYba0brBH12a7ODVyC1LM4-W75U5P7z3JUZRsdtyCYpBVXzFrJmgvaUdhVSz-98A2Qx6occXlTXUvfjF2oF2ckHZlzlErUygOr-F1R8MTBWOV5DoCyKGKL-9vDAtbllxGCWPG0dSuyB1JU6JlcIUmCXhJ9pjpZ3UmvxSktUwI9aD2ePzEidIDibRDRdqaOuiTc-Vj4CgGC-P0bakMh6OQh7SL5L0tnlAA-bw9ycJaRo"/>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Smart Workspace IoT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Connecting physical office sensors to a central facility management API.</p>
+<div class="mb-4">
+<div class="text-secondary font-metric-display text-metric-display">15 min</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Avg Response Improvement</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+<div class="flex gap-2">
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">MQTT</span>
+<span class="font-label-md text-label-md text-on-primary-fixed-variant">Go</span>
+</div>
+<a class="material-symbols-outlined text-primary" href="#">arrow_forward</a>
+</div>
+</div>
+</article>
+</div>
+<!-- CTA Section -->
+<section class="mt-stack-lg p-stack-lg bg-primary-container rounded-xl text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<div class="relative z-10 flex flex-col items-center gap-stack-sm max-w-xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-surface-container-lowest">Interested in collaborating?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">Currently accepting select projects for Q4 2024. Let's discuss how technical precision can drive your next success metric.</p>
+<div class="flex gap-gutter mt-4">
+<button class="px-8 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-md hover:translate-y-[-2px] transition-transform shadow-lg">Start a Conversation</button>
+<button class="px-8 py-3 border border-outline-variant text-surface-container-lowest rounded-lg font-label-md hover:bg-surface-container-lowest/10 transition-colors">Download Resume</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-highest dark:bg-surface-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-[1200px] mx-auto px-margin-desktop gap-gutter">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Portfolio.OS</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">© 2024 Portfolio.OS. Engineered for performance.</p>
+</div>
+<nav class="flex gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-300" href="#">Email</a>
+</nav>
+</div>
+</footer>
+<script>
+        // Simple Micro-interaction: Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Hover animation for cards using vanilla JS for subtle refinement
+        const cards = document.querySelectorAll('.project-card-shadow');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Potential for adding subtle canvas particles on hover if needed
+            });
+        });
+    </script>
+</body></html>

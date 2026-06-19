@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio.OS | Mobile Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-anim {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar (Mobile Active) -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm px-margin-mobile h-16 flex justify-between items-center" id="top-nav">
+<span class="font-headline-md text-headline-md font-bold text-primary">Portfolio.OS</span>
+<button aria-label="Toggle Menu" class="p-base text-primary active:scale-95 transition-transform" id="menu-toggle">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</nav>
+<!-- Mobile Menu Overlay (Hidden by default) -->
+<div class="fixed inset-0 z-[60] bg-surface translate-x-full transition-transform duration-300 ease-in-out p-margin-mobile flex flex-col" id="mobile-menu">
+<div class="flex justify-between items-center mb-stack-lg">
+<span class="font-headline-md text-headline-md font-bold text-primary">Portfolio.OS</span>
+<button class="p-base text-primary" id="menu-close">
+<span class="material-symbols-outlined text-[32px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-stack-md">
+<!-- Shared Component Links -->
+<a class="font-headline-lg text-headline-lg text-tertiary-container border-b-2 border-tertiary-container pb-base" href="#">Home</a>
+<a class="font-headline-lg text-headline-lg text-on-surface-variant hover:text-primary transition-colors pb-base" href="#">About</a>
+<a class="font-headline-lg text-headline-lg text-on-surface-variant hover:text-primary transition-colors pb-base" href="#">Projects</a>
+<hr class="border-outline-variant my-base"/>
+<button class="w-full py-stack-sm bg-primary text-on-primary font-label-md text-label-md rounded-lg active:scale-95 transition-all">Login</button>
+</div>
+</div>
+<!-- Main Hero Section -->
+<main class="flex-grow pt-24 px-margin-mobile flex flex-col gap-stack-lg relative overflow-hidden">
+<!-- Abstract Background Element -->
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+<!-- Name and Role -->
+<header class="flex flex-col gap-base">
+<div class="inline-flex items-center gap-2 bg-secondary-container px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md text-on-secondary-container">AVAILABLE FOR HIRE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl tracking-tight text-primary">Alex Chen</h1>
+<p class="font-headline-sm text-headline-sm text-on-surface-variant leading-tight max-w-[80%]">Senior Systems Architect specializing in Cloud Native performance.</p>
+</header>
+<!-- Metrics Grid (2x2) -->
+<section class="grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest p-stack-md rounded-xl shadow-[0_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-1 border border-outline-variant/20">
+<span class="font-metric-display text-metric-display text-secondary tracking-tighter">12+</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Years Experience</span>
+</div>
+<div class="bg-surface-container-lowest p-stack-md rounded-xl shadow-[0_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-1 border border-outline-variant/20">
+<span class="font-metric-display text-metric-display text-secondary tracking-tighter">84</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Projects Shipped</span>
+</div>
+<div class="bg-surface-container-lowest p-stack-md rounded-xl shadow-[0_4px_20px_rgba(15,23,42,0.05)] flex flex-col gap-1 border border-outline-variant/20 col-span-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-metric-display text-metric-display text-secondary tracking-tighter">99.9%</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">Uptime Average</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[48px]" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+</div>
+</section>
+<!-- CTA Buttons -->
+<div class="flex flex-col gap-stack-sm">
+<button class="w-full bg-primary text-on-primary font-headline-sm py-4 rounded-xl shadow-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                View Projects
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full bg-surface-container-low text-primary border-2 border-primary font-headline-sm py-4 rounded-xl hover:bg-surface-container-high active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                Download Resume
+                <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<!-- Tech Stack Wrapping Flex -->
+<section class="flex flex-col gap-stack-sm mb-stack-lg">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase">Technical Ecosystem</h3>
+<div class="flex flex-wrap gap-base">
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-label-md text-label-md text-primary">Go</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">cloud</span>
+<span class="font-label-md text-label-md text-primary">Kubernetes</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">database</span>
+<span class="font-label-md text-label-md text-primary">PostgreSQL</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">token</span>
+<span class="font-label-md text-label-md text-primary">Rust</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">hub</span>
+<span class="font-label-md text-label-md text-primary">GraphQL</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/40">
+<span class="material-symbols-outlined text-primary text-[18px]">monitoring</span>
+<span class="font-label-md text-label-md text-primary">Prometheus</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-stack-lg bg-surface-container-highest border-t border-outline-variant mt-auto">
+<div class="flex flex-col gap-stack-md items-center px-margin-mobile">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Portfolio.OS</span>
+<div class="flex gap-stack-md">
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">Email</a>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-center opacity-70">
+                © 2024 Portfolio.OS. Engineered for performance.
+            </p>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Subtle parallax/micro-interaction on metrics
+        document.querySelectorAll('.bg-surface-container-lowest').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.backgroundColor = 'var(--tw-surface-container-low)';
+            });
+            card.addEventListener('touchend', () => {
+                card.style.transform = 'scale(1)';
+                card.style.backgroundColor = 'var(--tw-surface-container-lowest)';
+            });
+        });
+    </script>
+</body></html>

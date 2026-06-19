@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio.OS - Admin Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#565e74",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "on-tertiary-fixed": "#001a42",
+                    "on-secondary-fixed-variant": "#005236",
+                    "secondary-container": "#6cf8bb",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed": "#6ffbbe",
+                    "outline-variant": "#c6c6cd",
+                    "on-surface-variant": "#45464d",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "outline": "#76777d",
+                    "on-secondary-container": "#00714d",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "secondary": "#006c49",
+                    "tertiary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-container": "#3980f4",
+                    "surface-bright": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004395",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container": "#eceef0",
+                    "background": "#f7f9fb",
+                    "tertiary-container": "#001a42",
+                    "primary-fixed-dim": "#bec6e0",
+                    "inverse-surface": "#2d3133",
+                    "primary-fixed": "#dae2fd",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#7c839b",
+                    "primary": "#000000",
+                    "secondary-fixed-dim": "#4edea3",
+                    "inverse-primary": "#bec6e0",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#3f465c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "stack-sm": "12px",
+                    "container-max": "1200px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "metric-display": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "metric-display": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7f9fb;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .login-card {
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .input-focus-ring:focus-within {
+            border-color: #004395; /* Using tertiary variant for focus */
+            box-shadow: 0 0 0 2px rgba(0, 67, 149, 0.1);
+        }
+        .mesh-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center px-margin-mobile relative overflow-hidden">
+<!-- Atmospheric Background -->
+<div class="mesh-bg opacity-40">
+
+</div>
+<!-- Login Container -->
+<main class="w-full max-w-[400px] z-10">
+<!-- Header / Branding -->
+<div class="text-center mb-stack-lg animate-fade-in">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tighter mb-base">
+                Portfolio.OS
+            </h1>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">
+                System Controller
+            </p>
+</div>
+<!-- Centered Form Card -->
+<section class="bg-surface-container-lowest login-card rounded-xl p-8 border border-outline-variant/30 backdrop-blur-sm">
+<header class="mb-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface">Admin Login</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Enter credentials to access the terminal.</p>
+</header>
+<form class="flex flex-col gap-stack-md" onsubmit="event.preventDefault();">
+<!-- Username Field -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="username">USERNAME</label>
+<div class="relative flex items-center border border-outline rounded-lg bg-surface-bright transition-all input-focus-ring">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant">person</span>
+<input autocapitalize="none" class="w-full pl-10 pr-4 py-3 bg-transparent border-none rounded-lg font-body-md text-on-surface focus:ring-0 placeholder:text-outline" id="username" name="username" placeholder="e.g. admin_pro" required="" type="text"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">PASSWORD</label>
+<button class="font-label-md text-label-md text-on-tertiary-container hover:underline transition-all" type="button">Forgot?</button>
+</div>
+<div class="relative flex items-center border border-outline rounded-lg bg-surface-bright transition-all input-focus-ring">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant">lock</span>
+<input class="w-full pl-10 pr-12 py-3 bg-transparent border-none rounded-lg font-body-md text-on-surface focus:ring-0 placeholder:text-outline" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-3 p-1 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" id="toggle-password" type="button">
+<span class="material-symbols-outlined" id="password-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me Toggle (Mobile Optimized Tap Area) -->
+<div class="flex items-center gap-3 py-2 cursor-pointer select-none" onclick="document.getElementById('remember').click()">
+<input class="w-5 h-5 rounded border-outline text-on-tertiary-container focus:ring-on-tertiary-container cursor-pointer" id="remember" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer" for="remember">Keep session active</label>
+</div>
+<!-- Primary Action -->
+<button class="mt-2 w-full bg-on-tertiary-fixed-variant text-on-primary py-4 rounded-xl font-label-md text-label-md uppercase tracking-wider shadow-lg hover:translate-y-[-2px] active:scale-95 transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+                    Sign In
+                    <span class="material-symbols-outlined">login</span>
+</button>
+</form>
+<!-- Footer links inside card -->
+<div class="mt-stack-md pt-stack-md border-t border-outline-variant flex justify-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[18px]">help_outline</span>
+                    Need assistance?
+                </a>
+</div>
+</section>
+<!-- Decorative Security Message -->
+<div class="mt-8 flex items-center justify-center gap-2 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="font-label-md text-[12px] uppercase tracking-tighter">Encrypted 256-bit Connection</p>
+</div>
+</main>
+<!-- Script for Interactions -->
+<script>
+        // Password Visibility Toggle
+        const toggleBtn = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('password');
+        const passwordIcon = document.getElementById('password-icon');
+
+        toggleBtn.addEventListener('click', () => {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            passwordIcon.textContent = type === 'password' ? 'visibility' : 'visibility_off';
+        });
+
+        // Form Submission visual feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = `<span class="material-symbols-outlined animate-spin">refresh</span> Authorizing...`;
+            
+            // Simulate API call
+            setTimeout(() => {
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+            }, 1500);
+        });
+
+        // Light/Dark detection (forcing light as per requirement but ready for hybrid)
+        document.documentElement.classList.add('light');
+    </script>
+</body></html>
