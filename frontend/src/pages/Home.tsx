@@ -83,10 +83,12 @@ export default function Home() {
 
           {/* Profile Visual */}
           <div className="col-span-12 lg:col-span-4 relative group">
-            <div className="w-full aspect-square rounded-xl overflow-hidden tonal-card border border-outline-variant/20 bg-surface-container flex items-center justify-center">
-              <span className="material-symbols-outlined text-on-surface-variant" style={{ fontSize: '96px' }}>
-                person
-              </span>
+            <div className="w-full aspect-square rounded-xl overflow-hidden border border-outline-variant/20 bg-surface-container">
+              <img
+                src="https://api.dicebear.com/9.x/lorelei/svg?seed=IsaacKim&backgroundColor=e8f0fe&radius=0"
+                alt="김이삭 프로필"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary-container rounded-lg -z-10 opacity-50 blur-xl" />
           </div>
