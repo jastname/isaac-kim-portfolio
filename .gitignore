@@ -9,11 +9,15 @@ dist/
 build/
 .venv/
 venv/
+env/
 
 # Env & secrets
 .env
 .env.local
 .env.*.local
+.env.production
+*.pem
+*.key
 
 # DB
 *.db
@@ -23,6 +27,10 @@ venv/
 node_modules/
 frontend/dist/
 
+# Railway / Vercel
+.vercel/
+railway.toml
+
 # IDE
 .vscode/
 .idea/
@@ -30,3 +38,11 @@ frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Claude Code
+.claude/
+
+# Playwright artifacts
+.playwright-mcp/
+test-results/
+playwright-report/

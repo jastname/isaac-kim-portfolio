@@ -9,9 +9,8 @@ from pydantic import BaseModel
 
 router = APIRouter(prefix="/api/auth", tags=["auth"])
 
-# 하드코딩된 관리자 계정
-ADMIN_USERNAME = "admin"
-ADMIN_PASSWORD = "admin123"
+ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
 
 SECRET_KEY = os.getenv("SECRET_KEY", "portfolio-os-secret-key-2024")
 ALGORITHM = "HS256"
